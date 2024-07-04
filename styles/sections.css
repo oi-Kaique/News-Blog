@@ -1,0 +1,132 @@
+section header{
+    border-top: 1px solid var(--stroke-color);
+    padding-block:0.750rem 1.500rem;
+    font: var(--text-span);
+
+    a{
+        justify-self: end;
+        align-items: center;
+        gap: 6px;
+
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+
+        &:hover span{
+            background-image: url(../assets/icons/ArrowRight-hover.svg);
+        }
+    }
+}
+
+
+#featured{
+    
+    grid-area: featured;
+
+    img{
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .card{
+        border-radius: 0.250rem;
+        position: relative;
+        overflow: hidden;
+
+
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(
+                180deg,
+                transparent 0%,
+                #020617 100%
+            );
+        }
+
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            padding:1.500rem ;
+
+            &:has(.text-lg){
+                padding:0.750rem;
+            }
+
+            h2{
+                margin-top:0.500rem ;
+            }
+        }
+    }
+}
+
+
+#weekly{
+
+    grid-area: weekly;
+
+    &>div{
+        grid-template-columns: repeat(4, 292px);
+    }
+
+    img{
+        height:18rem;
+
+    }
+
+    figure{
+        position: relative;
+    }
+
+    .content-tag{
+        position: absolute;
+        top: 0.500rem;
+        left: 0.500rem;
+    }
+
+    p{
+        margin-top: 0.500rem;
+        font-weight: 800;
+    }
+}
+
+
+#ai{
+
+    grid-area: ai;
+    
+    img{
+        width: 11rem;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3{
+        margin-block:0.500rem 0.250rem;
+
+    }
+    
+}
+
+aside{
+    grid-area: aside;
+}
+
+#more{
+    margin-top: 2rem;
+   
+   
+ h3{
+      margin-top:0.500rem ; 
+    }
+  
+  img{
+      width: 4.500rem;
+      aspect-ratio:1/1 ;
+      object-fit: cover;
+    }  
+}
